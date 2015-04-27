@@ -16,9 +16,13 @@ public class CalcProfitCommands implements CommandMarker {
 	public String calcprofit(
 			@CliOption(key = { "input" }, mandatory = true, help = "The input csv data file") final String input,
 			@CliOption(key = { "output" }, mandatory = false, help = "The output summary file", specifiedDefaultValue = "calcprofit.output.csv") final String output) {
-
-		String retMessage = calcProfitIoCtrl.calcProfitFileHandling(input, output);
-
+		String retMessage;
+		if( input==null || output==null ){
+			retMessage = "You should specify option (--input, --output) for this command";
+		}else{
+		
+			retMessage = calcProfitIoCtrl.calcProfitFileHandling(input, output);
+		}
 		return retMessage;
 	}
 
