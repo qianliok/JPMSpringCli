@@ -1,0 +1,6 @@
+instrument_type,name,quantity,buy_price,sell_price,coupon
+Equity,AAA,123,1.01,1.10
+Equity,BBBB,3,1.05,1.01
+Bond,CCC,3,,,0.13
+Equity,AAA,12,1.11,1.13
+Bond,DD,3,,,1.24
